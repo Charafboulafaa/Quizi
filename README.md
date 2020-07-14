@@ -55,15 +55,15 @@ The MVP for **Quizi** will feature user creation, authentication, the ability to
 
 #### Wireframes
 
-![Feed](proposal/home.png)
+![Feed](proposal/home.PNG)
 
 - Homepage
 
-![Feed](proposal/quizBuild.png)
+![Feed](proposal/quizBuild.PNG)
 
 - QuizBuild
 
-![Feed](proposal/quiz.png)
+![Feed](proposal/quiz.PNG)
 
 - Quiz
 
