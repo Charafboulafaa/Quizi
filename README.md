@@ -5,6 +5,7 @@
   - [Goals](#goals)
   - [Libraries and Dependencies](#libraries-and-dependencies)
   - [Client (Front End)](#client-front-end)
+    - [Wireframes](#wireframes)
     - [Component Hierarchy](#component-hierarchy)
     - [Component Breakdown](#component-breakdown)
     - [Time Estimates](#time-estimates)
@@ -51,6 +52,21 @@ The MVP for **Quizi** will feature user creation, authentication, the ability to
 <br>
 
 ### Client (Front End)
+
+#### Wireframes
+
+![Feed](proposal/Home.png)
+
+- Homepage
+
+![Feed](proposal/QuizBuild.png)
+
+- QuizBuild
+
+![Feed](proposal/Quiz.png)
+
+- Quiz
+
 
 #### Component Hierarchy
 
