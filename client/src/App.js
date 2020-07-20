@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
+import Quiz from './pages/Quiz';
 import {Switch, Route} from 'react-router-dom';
 import Login from './pages/Login';
 
@@ -16,6 +17,9 @@ function App() {
           </Route>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/quiz/:id">
+            <Quiz />
           </Route>
         </Switch>
       </div>
