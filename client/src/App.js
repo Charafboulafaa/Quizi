@@ -6,6 +6,7 @@ import Quiz from './pages/Quiz';
 import NewQuiz from './pages/NewQuiz';
 import {Switch, Route} from 'react-router-dom';
 import Login from './pages/Login';
+import Register from './pages/Register';
 import {verifyUser} from './services/auth'
 
 function App() {
@@ -30,6 +31,9 @@ function App() {
           </Route>
           <Route path="/login">
             <Login setCurrentUser={setCurrentUser} currentUser={currentUser}/>
+          </Route>
+          <Route path="/register">
+            <Register setCurrentUser={setCurrentUser} currentUser={currentUser}/>
           </Route>
           <Route path="/quiz/:id">
             <Quiz />
