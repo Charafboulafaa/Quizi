@@ -6,4 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create({username: 'Charaf', email: 'charaf@gmail.com', password: 'charaf123'})
+charaf = User.create(username: 'charaf', email: 'charaf@gmail.com', password: 'charaf123')
+
+david = User.create(username: 'david', email: 'david@gmail.com', password: '123david')
+
+Quiz.create([
+    {name: 'The Coldest Sunset', user_id: charaf},
+    {name: 'Ruby land', user_id: david},
+    {name: 'Rails', user_id: david}
+])
