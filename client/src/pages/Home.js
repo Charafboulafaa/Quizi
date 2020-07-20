@@ -1,10 +1,10 @@
 import React from 'react'
 import QuizList from '../components/QuizList'
 
-export default function Home() {
+export default function Home(props) {
     return (
         <div>
-            <QuizList />
+           {props.currentUser && <QuizList currentUser={props.currentUser}/>}
         </div>
     )
 }

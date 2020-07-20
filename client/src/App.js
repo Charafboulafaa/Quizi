@@ -27,7 +27,7 @@ function App() {
       <div className="container mx-auto">
         <Switch>
           <Route path="/" exact>
-            <Home />
+            <Home currentUser={currentUser}/>
           </Route>
           <Route path="/login">
             <Login setCurrentUser={setCurrentUser} currentUser={currentUser}/>
