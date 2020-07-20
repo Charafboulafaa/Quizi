@@ -19,7 +19,7 @@ class QuizzesController < ApplicationController
   # POST /quizzes
   def create
     @quiz = Quiz.new(quiz_params)
-
+    @quiz.user = @current_user
     if @quiz.save
       render json: @quiz, status: :created, location: @quiz
     else

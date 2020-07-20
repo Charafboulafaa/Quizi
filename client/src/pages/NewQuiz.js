@@ -5,6 +5,7 @@ export default function NewQuiz() {
     return (
         <div className="p-8 flex flex-col max-w-md mx-auto">
             <Input label="Quiz Name" name="quiz_name"/>
+            
             <Input label="Question" name="question"/>
             
             <div>
@@ -13,7 +14,7 @@ export default function NewQuiz() {
                 <Input label="Answer 3" name="answer"/>
             </div>
 
-            <button></button>
+            <button>add Question</button>
         </div>
     )
 }
