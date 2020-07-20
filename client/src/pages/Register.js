@@ -5,7 +5,7 @@ import {useHistory, Redirect} from 'react-router-dom'
 export default function Register(props) {
     let history = useHistory()
 
-    const [formData, setFormData] = useState({username: '', password: ''})
+    const [formData, setFormData] = useState({username: '', email: '', password: ''})
 
     const handleChange = (e) => {
         const {name, value} = e.target
