@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@responsive{
+    .w-23-perc{
+        width: 23%;
+    }
+}

@@ -17863,6 +17863,10 @@ video {
   transition-delay: 1000ms;
 }
 
+.w-23-perc{
+  width: 23%;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
@@ -35135,6 +35139,10 @@ video {
 
   .sm\:delay-1000 {
     transition-delay: 1000ms;
+  }
+
+  .sm\:w-23-perc{
+    width: 23%;
   }
 }
 
@@ -52411,6 +52419,10 @@ video {
   .md\:delay-1000 {
     transition-delay: 1000ms;
   }
+
+  .md\:w-23-perc{
+    width: 23%;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -69686,6 +69698,10 @@ video {
   .lg\:delay-1000 {
     transition-delay: 1000ms;
   }
+
+  .lg\:w-23-perc{
+    width: 23%;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -86960,5 +86976,9 @@ video {
 
   .xl\:delay-1000 {
     transition-delay: 1000ms;
+  }
+
+  .xl\:w-23-perc{
+    width: 23%;
   }
 }
