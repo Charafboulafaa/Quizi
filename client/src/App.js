@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
@@ -6,8 +6,20 @@ import Quiz from './pages/Quiz';
 import NewQuiz from './pages/NewQuiz';
 import {Switch, Route} from 'react-router-dom';
 import Login from './pages/Login';
+import {verifyUser} from './services/auth'
 
 function App() {
+  const [currentUser, setCurrentUser] = useState(null)
+
+  const handleVerify = async () =>{
+    const userData = await verifyUser()
+    setCurrentUser(userData)
+  }
+
+  useEffect(()=>{
+    handleVerify()
+  },[])
+
   return (
     <div className="App">
       <Navbar/>
@@ -17,7 +29,7 @@ function App() {
             <Home />
           </Route>
           <Route path="/login">
-            <Login />
+            <Login setCurrentUser={setCurrentUser} currentUser={currentUser}/>
           </Route>
           <Route path="/quiz/:id">
             <Quiz />
