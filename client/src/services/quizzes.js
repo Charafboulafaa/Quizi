@@ -9,3 +9,11 @@ export const getUserQuizzes =async (id)=>{
 
     return res.data.quizzes
 }
+
+export const createQuiz = async(newQuiz, newQuestions) => {
+    newQuiz['questions_attributes'] = newQuestions
+
+    const res = await api.post('/quizzes', {quiz:newQuiz})
+
+    return res.data
+}

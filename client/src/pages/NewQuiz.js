@@ -1,23 +1,27 @@
 import React, {useState} from 'react';
 import Input from '../components/FormInput';
+import {createQuiz} from '../services/quizzes';
+import {useHistory} from 'react-router-dom';
 
-export default function NewQuiz() {
+export default function NewQuiz(props) {
 
-    const [quizName, setQuizName] = useState('')
+  const history = useHistory()
+
+    const [quiz, setQuiz] = useState({name:''})
     
     const [questions, setQuestions] = useState([
         {
           question: '',
-          answers: [
-            { answer: '', correct:false },
-            { answer: '', correct:false },
-            { answer: '', correct:false }
+          answers_attributes: [
+            { content: '', is_correct:false },
+            { content: '', is_correct:false },
+            { content: '', is_correct:false }
           ]
         }
     ])
       
     const handleQuizNameChange = (e) => {
-      setQuizName(e.target.value)
+      setQuiz({name: e.target.value})
     }
 
     const addQuestion = () => {
@@ -26,10 +30,10 @@ export default function NewQuiz() {
           ...questions,
           {
             question: '',
-            answers: [
-              { answer: '', correct:false },
-              { answer: '', correct:false },
-              { answer: '', correct:false }
+            answers_attributes: [
+              { content: '', is_correct:false },
+              { content: '', is_correct:false },
+              { content: '', is_correct:false }
             ]
           }
         ]
@@ -45,7 +49,7 @@ export default function NewQuiz() {
             currentQuestion.question = value
         }
         else {
-            currentQuestion.answers[answerIndex].answer = value
+            currentQuestion.answers_attributes[answerIndex].content = value
         }
 
         let editedQuestions = questions.map((question, index) => (
@@ -55,13 +59,21 @@ export default function NewQuiz() {
         setQuestions(editedQuestions)
     }
 
+    const handleSubmit = async () => {
+      const newQuiz = await createQuiz(quiz, questions)
+
+      props.setQuizzes([...props.quizzes, newQuiz])
+
+      history.push('/')
+    }
+
         
 
     return (
         <div className="p-8 flex flex-col max-w-md mx-auto">
 
           <div className="my-2">
-            <input className="shadow appearance-none border rounded w-full py-2 px-3 mb-2 text-gray-900" type="text" placeholder="Quiz Name" value={quizName} onChange={(e) => handleQuizNameChange(e)}/>
+            <input className="shadow appearance-none border rounded w-full py-2 px-3 mb-2 text-gray-900" type="text" placeholder="Quiz Name" value={quiz.name} onChange={(e) => handleQuizNameChange(e)}/>
           </div>
 
         {questions.map((question, index) => (
@@ -69,6 +81,10 @@ export default function NewQuiz() {
         ))}
 
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={addQuestion}>Add Question</button>
+
+        <button class="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded mt-3" onClick={handleSubmit}>Submit</button>
+
+        
 
         </div>
     )

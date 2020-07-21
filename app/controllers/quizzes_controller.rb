@@ -21,7 +21,7 @@ class QuizzesController < ApplicationController
     @quiz = Quiz.new(quiz_params)
     @quiz.user = @current_user
     if @quiz.save
-      render json: @quiz, status: :created, location: @quiz
+      render json: @quiz, include: [questions: {include: :answers}], status: :created
     else
       render json: @quiz.errors, status: :unprocessable_entity
     end
@@ -49,6 +49,6 @@ class QuizzesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def quiz_params
-      params.require(:quiz).permit(:name)
+      params.require(:quiz).permit(:name, questions_attributes: [:question, answers_attributes: [:content, :is_correct]])
     end
 end

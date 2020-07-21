@@ -4,7 +4,7 @@ import QuizList from '../components/QuizList'
 export default function Home(props) {
     return (
         <div>
-           {props.currentUser && <QuizList currentUser={props.currentUser}/>}
+           {props.currentUser && <QuizList quizzes={props.quizzes} currentUser={props.currentUser}/>}
         </div>
     )
 }

@@ -7,9 +7,11 @@ import NewQuiz from './pages/NewQuiz';
 import {Switch, Route} from 'react-router-dom';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import {verifyUser} from './services/auth'
+import {verifyUser} from './services/auth';
+import {getUserQuizzes} from './services/quizzes'
 
 function App() {
+  const [quizzes, setQuizzes] = useState([])
   const [currentUser, setCurrentUser] = useState(null)
 
   const handleVerify = async () =>{
@@ -17,9 +19,21 @@ function App() {
     setCurrentUser(userData)
   }
 
+  const fetchQuizzes = async()=>{
+    const quizzes = await getUserQuizzes(currentUser.id)
+    setQuizzes(quizzes)
+  }
+
   useEffect(()=>{
-    handleVerify()
-  },[])
+
+    if(currentUser){
+      fetchQuizzes()
+    }
+    else{
+      handleVerify()
+    }
+
+  },[currentUser])
 
   return (
     <div className="App">
@@ -27,7 +41,7 @@ function App() {
       <div className="container mx-auto">
         <Switch>
           <Route path="/" exact>
-            <Home currentUser={currentUser}/>
+            <Home quizzes={quizzes} currentUser={currentUser}/>
           </Route>
           <Route path="/login">
             <Login setCurrentUser={setCurrentUser} currentUser={currentUser}/>
@@ -39,7 +53,7 @@ function App() {
             <Quiz />
           </Route>
           <Route path="/new">
-            <NewQuiz />
+            <NewQuiz setQuizzes={setQuizzes} quizzes={quizzes}/>
           </Route>
         </Switch>
       </div>
