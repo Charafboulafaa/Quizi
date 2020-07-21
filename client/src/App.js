@@ -9,6 +9,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import {verifyUser} from './services/auth';
 import {getUserQuizzes} from './services/quizzes'
+import EditQuiz from './pages/EditQuiz'
 
 function App() {
   const [quizzes, setQuizzes] = useState([])
@@ -41,7 +42,7 @@ function App() {
       <div className="container mx-auto">
         <Switch>
           <Route path="/" exact>
-            <Home quizzes={quizzes} currentUser={currentUser}/>
+            <Home setQuizzes={setQuizzes} quizzes={quizzes} currentUser={currentUser}/>
           </Route>
           <Route path="/login">
             <Login setCurrentUser={setCurrentUser} currentUser={currentUser}/>
@@ -54,6 +55,9 @@ function App() {
           </Route>
           <Route path="/new">
             <NewQuiz setQuizzes={setQuizzes} quizzes={quizzes}/>
+          </Route>
+          <Route path="/edit/:id">
+            <EditQuiz setQuizzes={setQuizzes} quizzes={quizzes}/>
           </Route>
         </Switch>
       </div>

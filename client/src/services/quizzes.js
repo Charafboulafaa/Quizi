@@ -17,3 +17,15 @@ export const createQuiz = async(newQuiz, newQuestions) => {
 
     return res.data
 }
+
+export const updateQuiz = async(newQuiz, newQuestions, id) => {
+    newQuiz['questions_attributes'] = newQuestions
+
+    const res = await api.put(`/quizzes/${id}`, {quiz:newQuiz})
+
+    return res.data
+}
+
+export const deleteQuiz = async (id) => {
+    await api.delete(`/quizzes/${id}`)
+}

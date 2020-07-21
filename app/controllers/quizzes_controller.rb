@@ -30,7 +30,7 @@ class QuizzesController < ApplicationController
   # PATCH/PUT /quizzes/1
   def update
     if @quiz.update(quiz_params)
-      render json: @quiz
+      render json: @quiz, include: [questions: {include: :answers}]
     else
       render json: @quiz.errors, status: :unprocessable_entity
     end
@@ -49,6 +49,6 @@ class QuizzesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def quiz_params
-      params.require(:quiz).permit(:name, questions_attributes: [:question, answers_attributes: [:content, :is_correct]])
+      params.require(:quiz).permit(:name, questions_attributes: [:id, :question, answers_attributes: [:id, :content, :is_correct]])
     end
 end
