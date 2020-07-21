@@ -7,19 +7,11 @@ export default function NewQuiz() {
     
     const [questions, setQuestions] = useState([
         {
-          question: 'this is a question',
+          question: '',
           answers: [
-            { answer: 'answer one', correct:false },
-            { answer: 'answer 2', correct:true },
-            { answer: '3', correct:false }
-          ]
-        },
-        {
-          question: 'this is a question',
-          answers: [
-            { answer: 'answer one', correct:false },
-            { answer: 'answer 2', correct:false },
-            { answer: '3', correct:true }
+            { answer: '', correct:false },
+            { answer: '', correct:false },
+            { answer: '', correct:false }
           ]
         }
     ])
@@ -29,11 +21,11 @@ export default function NewQuiz() {
         [
           ...questions,
           {
-            question: 'this is a question',
+            question: '',
             answers: [
-              { answer: 'answer one', correct:false },
-              { answer: 'answer 2', correct:false },
-              { answer: '3', correct:false }
+              { answer: '', correct:false },
+              { answer: '', correct:false },
+              { answer: '', correct:false }
             ]
           }
         ]

@@ -2236,3 +2236,143 @@ Processing by AuthenticationController#verify as HTML
 Completed 200 OK in 9ms (Views: 1.3ms | ActiveRecord: 0.6ms | Allocations: 900)
 
 
+Started GET "/auth/verify" for ::1 at 2020-07-21 09:48:57 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 10ms (Views: 2.1ms | ActiveRecord: 0.4ms | Allocations: 900)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-21 09:51:01 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 8ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 900)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-21 09:51:22 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 8ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 900)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-21 09:51:33 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 13ms (Views: 3.5ms | ActiveRecord: 0.6ms | Allocations: 900)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-21 09:51:40 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 16ms (Views: 9.5ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-21 09:51:48 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 12ms (Views: 1.7ms | ActiveRecord: 0.8ms | Allocations: 900)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-21 09:51:56 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 7ms (Views: 0.9ms | ActiveRecord: 0.4ms | Allocations: 900)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-21 09:53:36 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 8ms (Views: 0.6ms | ActiveRecord: 0.6ms | Allocations: 901)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-21 09:53:47 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 900)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-21 09:55:10 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 900)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-21 09:55:23 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 900)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-21 10:00:09 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 12ms (Views: 0.9ms | ActiveRecord: 0.7ms | Allocations: 900)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-21 10:00:21 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 900)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-21 10:00:45 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 11ms (Views: 1.5ms | ActiveRecord: 0.8ms | Allocations: 900)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-21 10:00:55 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 900)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-21 10:01:34 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 900)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-21 10:01:42 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 0.5ms | Allocations: 900)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-21 10:02:03 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 900)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-21 10:02:06 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 900)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-21 10:02:10 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 11ms (Views: 1.8ms | ActiveRecord: 0.7ms | Allocations: 900)
+
+
