@@ -11357,3 +11357,23 @@ Processing by QuizzesController#index as HTML
 Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 1.5ms | Allocations: 5159)
 
 
+Started GET "/auth/verify" for ::1 at 2020-07-22 09:31:14 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 0.7ms | Allocations: 988)
+
+
+Started GET "/quizzes" for ::1 at 2020-07-22 09:31:15 -0400
+Processing by QuizzesController#index as HTML
+  [1m[36mQuiz Load (0.7ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 44]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (1.0ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 14]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 15]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+Completed 200 OK in 14ms (Views: 10.9ms | ActiveRecord: 2.5ms | Allocations: 5197)
+
+

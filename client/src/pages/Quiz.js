@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {useParams} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 
 export default function Quiz(props) {
@@ -10,6 +11,8 @@ export default function Quiz(props) {
     const [currentQuestion, setCurrentQuestion] = useState(0)
 
     const [score, setScore] = useState(0)
+
+    const [done, setDone] = useState(false)
 
 
     useEffect(() => {
@@ -27,11 +30,14 @@ export default function Quiz(props) {
         if(index < quiz.questions.length){
             setCurrentQuestion(index)
         }
+        else{
+            setDone(true)
+        }
     }
 
     return (
         <>
-        {quiz && <div className="my-5">
+        {!done && quiz && <div className="my-5">
             <div className="my-3 text-right">Score : {score + '/' + quiz.questions.length}</div>
 
             <h1 className="text-5xl font-bold text-teal-600">{quiz.name}</h1>
@@ -45,6 +51,14 @@ export default function Quiz(props) {
                 
             </div>
         </div>}
+
+        {done && <div className="my-5">
+            <div className="my-3 text-5xl text-green-600">You're DONE ! </div>
+            <div className="my-3 text-3xl">Your Score is : {score + '/' + quiz.questions.length}</div>
+            <div className="text-gray-600 mt-10">
+                <Link to="/">Back to home</Link>
+            </div>
+            </div>}
         </>
     )
 }
