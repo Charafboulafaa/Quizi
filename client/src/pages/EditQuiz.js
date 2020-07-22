@@ -88,6 +88,18 @@ export default function EditQuiz(props) {
       history.push('/')
     }
 
+    const handleCheckBoxChange = (e, questionIndex, answerIndex) => {
+      let currentQuestion = questions[questionIndex]
+
+      
+      currentQuestion.answers_attributes[answerIndex].is_correct = !currentQuestion.answers_attributes[answerIndex].is_correct
+
+      let editedQuestions = questions.map((question, index) => (
+        questionIndex == index ? currentQuestion : question 
+      ))
+
+      setQuestions(editedQuestions)
+    }
         
 
     return (
@@ -98,7 +110,7 @@ export default function EditQuiz(props) {
           </div>
 
         {questions.map((question, index) => (
-            <Input question={question} index={index} handleChange={handleChange}/>
+            <Input question={question} index={index} handleChange={handleChange} handleCheckBoxChange={handleCheckBoxChange}/>
         ))}
 
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={addQuestion}>Add Question</button>

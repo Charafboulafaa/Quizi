@@ -11,7 +11,7 @@ export default function FormInput(props) {
                     <div className="flex justify-center items-center">
                         <input className="shadow appearance-none border rounded w-full py-2 px-3 my-1 mr-2 text-gray-900" placeholder={`Answer ${index+1}`} type="text" value={answer.content}  onChange={(e) => props.handleChange(e, props.index, index)}/>
 
-                        <input type="checkbox" checked={answer.is_correct ? 'checked' : ''}/>
+                        <input type="checkbox" checked={answer.is_correct ? 'checked' : ''} onChange={(e) => props.handleCheckBoxChange(e, props.index, index)}/>
                     </div>
                 ))}
 

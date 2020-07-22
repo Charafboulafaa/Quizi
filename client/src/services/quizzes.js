@@ -2,6 +2,7 @@ import api from './api-helper'
 
 export const getQuizzes =async ()=>{
     const res = await api.get('/quizzes')
+    return res.data
 }
 
 export const getUserQuizzes =async (id)=>{

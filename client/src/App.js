@@ -8,7 +8,7 @@ import {Switch, Route} from 'react-router-dom';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import {verifyUser} from './services/auth';
-import {getUserQuizzes} from './services/quizzes'
+import {getQuizzes} from './services/quizzes'
 import EditQuiz from './pages/EditQuiz'
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
   }
 
   const fetchQuizzes = async()=>{
-    const quizzes = await getUserQuizzes(currentUser.id)
+    const quizzes = await getQuizzes()
     setQuizzes(quizzes)
   }
 
@@ -50,9 +50,9 @@ function App() {
           <Route path="/register">
             <Register setCurrentUser={setCurrentUser} currentUser={currentUser}/>
           </Route>
-          <Route path="/quiz/:id">
-            <Quiz />
-          </Route>
+          {quizzes.length > 0 && <Route path="/quiz/:id">
+            <Quiz quizzes={quizzes}/>
+          </Route>}
           <Route path="/new">
             <NewQuiz setQuizzes={setQuizzes} quizzes={quizzes}/>
           </Route>

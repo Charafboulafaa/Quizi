@@ -1,17 +1,44 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react';
+import {useParams} from 'react-router-dom';
 
-export default function Quiz() {
+
+export default function Quiz(props) {
+    let { id } = useParams()
+
+    const [quiz, setQuiz] = useState(null)
+
+    const [currentQuestion, setCurrentQuestion] = useState(0)
+
+
+    useEffect(() => {
+        const quiz = props.quizzes.filter(quiz => quiz.id === +id)
+        setQuiz(quiz[0])
+    }, [])
+
+    const submitAnswer = (isCorrect) => {
+        if(isCorrect){
+            alert('Thank you Mike!')
+        }
+        let index = currentQuestion + 1
+        if(index < quiz.questions.length){
+            setCurrentQuestion(index)
+        }
+    }
+
     return (
-        <div className="my-5">
-            <h1 className="text-5xl font-bold text-teal-600">The Coldest Sunset</h1>
+        <>
+        {quiz && <div className="my-5">
+            <h1 className="text-5xl font-bold text-teal-600">{quiz.name}</h1>
 
-            <div className="my-8 p-6 text-2xl border-2 border-teal-800 rounded-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+            <div className="my-8 p-6 text-2xl border-2 border-teal-800 rounded-sm">{quiz.questions[currentQuestion].question}</div>
 
             <div className="flex justify-evenly">
-                <div className="p-4 border border-teal-800 rounded-sm hover:bg-teal-700 hover:text-white">Duis gravida blandit</div>
-                <div className="p-4 border border-teal-800 rounded-sm hover:bg-teal-700 hover:text-white">Duis gravida blandit</div>
-                <div className="p-4 border border-teal-800 rounded-sm hover:bg-teal-700 hover:text-white">Duis gravida blandit</div>
+                {quiz.questions[currentQuestion].answers.map(answer => (
+                    <div className="p-4 border border-teal-800 rounded-sm hover:bg-teal-700 hover:text-white" onClick={() => submitAnswer(answer.is_correct)}>{answer.content}</div>
+                ))}
+                
             </div>
-        </div>
+        </div>}
+        </>
     )
 }
