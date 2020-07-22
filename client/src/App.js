@@ -38,7 +38,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar/>
+      <Navbar currentUser={currentUser} setCurrentUser={setCurrentUser}/>
       <div className="container mx-auto">
         <Switch>
           <Route path="/" exact>
