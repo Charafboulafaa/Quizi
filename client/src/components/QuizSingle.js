@@ -11,22 +11,25 @@ export default function QuizSingle(props) {
     }
 
     return (
-        <div className="w-full mx-3 my-5 sm:mx-0 sm:w-2/5 md:w-2/5 lg:w-23-perc shadow-lg">
+        <div className="mx-3 my-5 sm:mx-0 sm:w-2/5 md:w-2/5 lg:w-23-perc shadow-lg">
             <div className="px-6 py-4">
-                <Link to={`/quiz/${props.quiz.id}`}>
-                    <div className="font-bold text-xl mb-2">{props.quiz.name}</div>
-                </Link>
-                <p className="text-gray-700 text-base">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                </p>
-            </div>
-            {props.currentUser.id === props.quiz.user_id && 
-                <div>
-                    <Link to={`/edit/${props.quiz.id}`}><button >Edit</button></Link>
-                    <button onClick={handleDelete}>Delete</button>
-                </div>
-            }
+                <div className="font-bold text-xl mb-2">{props.quiz.name}</div>
             
+                <div>
+                    <Link to={`/quiz/${props.quiz.id}`}>
+                        <button className="bg-teal-400 hover:bg-teal-700 text-white py-1 px-2 rounded mr-2">Play</button>
+                    </Link>
+                    {props.currentUser.id === props.quiz.user_id &&
+                    <>
+                        <Link to={`/edit/${props.quiz.id}`}>
+                            <button className="bg-orange-400 hover:bg-orange-700 text-white py-1 px-2 rounded mr-2">Edit</button>
+                        </Link>
+                        <button className="bg-red-400 hover:bg-red-700 text-white py-1 px-2 rounded" onClick={handleDelete}>Delete</button>
+                    </>
+                    }
+                </div>
+            
+            </div>
         </div>
     )
 }
