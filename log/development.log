@@ -10397,3 +10397,473 @@ Processing by QuizzesController#index as HTML
 Completed 200 OK in 91ms (Views: 85.2ms | ActiveRecord: 5.8ms | Allocations: 16002)
 
 
+Started GET "/auth/verify" for ::1 at 2020-07-22 01:21:55 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 8ms (Views: 0.9ms | ActiveRecord: 0.5ms | Allocations: 900)
+
+
+Started GET "/quizzes" for ::1 at 2020-07-22 01:21:56 -0400
+Processing by QuizzesController#index as HTML
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 36]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 37]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 39]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 6]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 10]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 11]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 12]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 42]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 9]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 43]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 13]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+Completed 200 OK in 49ms (Views: 45.0ms | ActiveRecord: 3.4ms | Allocations: 16000)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-22 01:22:02 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 7ms (Views: 0.9ms | ActiveRecord: 0.4ms | Allocations: 900)
+
+
+Started GET "/quizzes" for ::1 at 2020-07-22 01:22:02 -0400
+Processing by QuizzesController#index as HTML
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 36]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 37]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 39]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 6]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 10]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 11]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.4ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 12]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 42]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 9]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 43]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 13]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+Completed 200 OK in 53ms (Views: 48.4ms | ActiveRecord: 3.8ms | Allocations: 16001)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-22 01:22:51 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 900)
+
+
+Started GET "/quizzes" for ::1 at 2020-07-22 01:22:51 -0400
+Processing by QuizzesController#index as HTML
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 36]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 37]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 39]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 6]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 10]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 11]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 12]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 42]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 9]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 43]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 13]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+Completed 200 OK in 50ms (Views: 46.4ms | ActiveRecord: 3.6ms | Allocations: 16000)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-22 01:23:01 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 7ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 900)
+
+
+Started GET "/quizzes" for ::1 at 2020-07-22 01:23:01 -0400
+Processing by QuizzesController#index as HTML
+  [1m[36mQuiz Load (0.7ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 36]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 37]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (1.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 39]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.9ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 6]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.8ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 10]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.9ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 11]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.8ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 12]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 42]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.4ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 9]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 43]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 13]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+Completed 200 OK in 157ms (Views: 148.5ms | ActiveRecord: 8.0ms | Allocations: 16005)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-22 01:23:05 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 8ms (Views: 1.0ms | ActiveRecord: 0.4ms | Allocations: 900)
+
+
+Started GET "/quizzes" for ::1 at 2020-07-22 01:23:06 -0400
+Processing by QuizzesController#index as HTML
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 36]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 37]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 39]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 6]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 10]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 11]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.4ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 12]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 42]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 9]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 43]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 13]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+Completed 200 OK in 52ms (Views: 47.6ms | ActiveRecord: 3.9ms | Allocations: 16000)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-22 01:23:56 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 900)
+
+
+Started GET "/quizzes" for ::1 at 2020-07-22 01:23:57 -0400
+Processing by QuizzesController#index as HTML
+  [1m[36mQuiz Load (0.6ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 36]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 37]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 39]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 6]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 10]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 11]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 12]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 42]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 9]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 43]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 13]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+Completed 200 OK in 60ms (Views: 55.4ms | ActiveRecord: 4.2ms | Allocations: 16000)
+
+
+Started POST "/auth/login" for ::1 at 2020-07-22 01:24:20 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"charaf", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "charaf"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 524ms (Views: 0.7ms | ActiveRecord: 0.5ms | Allocations: 1027)
+
+
+Started GET "/quizzes" for ::1 at 2020-07-22 01:24:21 -0400
+Processing by QuizzesController#index as HTML
+  [1m[36mQuiz Load (0.7ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 36]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 37]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 39]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.5ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 6]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.5ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 10]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.5ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 11]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.5ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 12]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 42]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.5ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 9]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 43]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.5ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 13]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+Completed 200 OK in 87ms (Views: 80.1ms | ActiveRecord: 6.3ms | Allocations: 16003)
+
+
+Started POST "/auth/login" for ::1 at 2020-07-22 01:26:31 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"david", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "david"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 615ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 1027)
+
+
+Started GET "/quizzes" for ::1 at 2020-07-22 01:26:31 -0400
+Processing by QuizzesController#index as HTML
+  [1m[36mQuiz Load (0.5ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 36]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 37]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 39]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.5ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 6]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.5ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 10]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.6ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 11]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.5ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 12]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 42]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.5ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 9]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 43]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (1.0ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 13]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+Completed 200 OK in 104ms (Views: 96.8ms | ActiveRecord: 6.8ms | Allocations: 16002)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-22 01:26:45 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 900)
+
+
+Started GET "/quizzes" for ::1 at 2020-07-22 01:26:45 -0400
+Processing by QuizzesController#index as HTML
+  [1m[36mQuiz Load (0.3ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 36]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 37]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 39]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 6]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 10]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 11]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 12]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 42]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 9]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 43]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 13]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+Completed 200 OK in 46ms (Views: 42.5ms | ActiveRecord: 3.2ms | Allocations: 16000)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-22 01:27:45 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 9ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 900)
+
+
+Started GET "/quizzes" for ::1 at 2020-07-22 01:27:45 -0400
+Processing by QuizzesController#index as HTML
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 36]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 37]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 39]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 6]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 10]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 11]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.4ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 12]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 42]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 9]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 43]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 13]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+Completed 200 OK in 51ms (Views: 47.2ms | ActiveRecord: 3.7ms | Allocations: 16000)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-22 01:28:00 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.9ms | ActiveRecord: 0.4ms | Allocations: 900)
+
+
+Started GET "/quizzes" for ::1 at 2020-07-22 01:28:00 -0400
+Processing by QuizzesController#index as HTML
+  [1m[36mQuiz Load (0.6ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 36]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 37]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 39]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.4ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 6]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.5ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 10]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.4ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 11]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.4ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 12]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 42]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 9]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 43]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.4ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 13]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+Completed 200 OK in 94ms (Views: 89.0ms | ActiveRecord: 4.9ms | Allocations: 16002)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-22 01:28:02 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 12ms (Views: 1.7ms | ActiveRecord: 0.7ms | Allocations: 900)
+
+
+Started GET "/quizzes" for ::1 at 2020-07-22 01:28:02 -0400
+Processing by QuizzesController#index as HTML
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 36]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 37]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 39]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 6]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 10]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 11]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 12]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 42]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 9]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 43]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 13]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+Completed 200 OK in 56ms (Views: 52.3ms | ActiveRecord: 3.5ms | Allocations: 16000)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-22 01:28:06 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 12ms (Views: 1.6ms | ActiveRecord: 0.7ms | Allocations: 900)
+
+
+Started GET "/quizzes" for ::1 at 2020-07-22 01:28:06 -0400
+Processing by QuizzesController#index as HTML
+  [1m[36mQuiz Load (0.6ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 36]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 37]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 39]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.9ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 6]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.8ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 10]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.8ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 11]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.8ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 12]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 42]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 9]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = $1[0m  [["quiz_id", 43]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = $1[0m  [["question_id", 13]]
+  ↳ app/controllers/quizzes_controller.rb:11:in `index'
+Completed 200 OK in 127ms (Views: 119.6ms | ActiveRecord: 7.1ms | Allocations: 16000)
+
+

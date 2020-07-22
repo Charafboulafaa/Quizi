@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {registerUser} from '../services/auth'
-import {useHistory, Redirect} from 'react-router-dom'
+import {useHistory, Redirect, Link} from 'react-router-dom'
 
 export default function Register(props) {
     let history = useHistory()
@@ -44,6 +44,8 @@ export default function Register(props) {
                 <button className="bg-teal-400 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded">
                     Sign Up
                 </button>
+
+                <Link to="/login" className="cursor-pointer text-gray-600">Sign In</Link>
             </div>
         </form>
     )
