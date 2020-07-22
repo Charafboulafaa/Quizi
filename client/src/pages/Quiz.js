@@ -40,7 +40,7 @@ export default function Quiz(props) {
 
             <div className="flex justify-evenly">
                 {quiz.questions[currentQuestion].answers.map(answer => (
-                    <div className="p-4 border border-teal-800 rounded-sm hover:bg-teal-700 hover:text-white" onClick={() => submitAnswer(answer.is_correct)}>{answer.content}</div>
+                    <div className="p-4 border border-teal-800 rounded-sm hover:bg-teal-700 hover:text-white cursor-pointer" onClick={() => submitAnswer(answer.is_correct)}>{answer.content}</div>
                 ))}
                 
             </div>
